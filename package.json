@@ -2,9 +2,11 @@
   "name": "26-date-formatter-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "bin": {
+    "date-formatter": "./dist/index.js"
+  },
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "tsc && node dist/index.js"
   },
@@ -21,11 +23,12 @@
   "homepage": "https://github.com/kruzkasu223/26-date-formatter-cli#readme",
   "devDependencies": {
     "@types/node": "^18.14.2",
-    "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1",
+    "@types/prompts": "^2.4.2",
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "dayjs": "^1.11.7"
+    "dayjs": "^1.11.7",
+    "kleur": "^4.1.5",
+    "prompts": "^2.4.2"
   }
 }
